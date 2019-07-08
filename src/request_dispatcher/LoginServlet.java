@@ -22,8 +22,11 @@ public class LoginServlet extends HttpServlet {
 
 		String n = request.getParameter("userName");
 		String p = request.getParameter("userPass");
+		//password မွန္ခဲ့ရင္ welcomeServlet ဆိုတဲ့ servlet ကို လုပ္စရာလုပ္စရာရွိတာကို လုပ္ဖို႔ခိုင္းလိုက္ၿပီး respone ကို သူ႕ဆီၿပန္ယူလာခိုင္းလိုက္တာ
+		// include မွာ page ကို ထည့္ေပးလိုက္တာက်ေတာ့ login servlet response ၿပန္ရင္ အဲ့ page ကို ထည့္ေပးလိုက္တဲ့ သေဘာပဲ
 		if (p.equals("servlet")) {
 			RequestDispatcher rd = request.getRequestDispatcher("welcomeServlet");
+			
 			// getRequestDispatcher method ရဲ႕ parameter က servlet name ၿဖစ္လို႔ရသလို page name လည္းၿဖစ္လို႔ရတယ္
 			rd.forward(request, response);
 		} else {
