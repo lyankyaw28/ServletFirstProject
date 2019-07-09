@@ -148,7 +148,91 @@
     <servlet-name>CookieLogoutServlet</servlet-name>
     <url-pattern>/cookieLogoutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>HiddenFormField1</servlet-name>
+    <servlet-class>hidden_form_field.HiddenFormField1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HiddenFormField1</servlet-name>
+    <url-pattern>/hidden_form_field/HiddenFormField1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HiddenFormField2</servlet-name>
+    <servlet-class>hidden_form_field.HiddenFormField2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HiddenFormField2</servlet-name>
+    <url-pattern>/hidden_form_field/HiddenFormField2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UrlRewritingServlet1</servlet-name>
+    <servlet-class>url_rewriting.UrlRewritingServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UrlRewritingServlet1</servlet-name>
+    <url-pattern>/url_rewriting/urlRewritingServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UrlRewritingServlet2</servlet-name>
+    <servlet-class>url_rewriting.UrlRewritingServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UrlRewritingServlet2</servlet-name>
+    <url-pattern>/url_rewriting/urlRewritingServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HttpSessionServlet1</servlet-name>
+    <servlet-class>http_session.HttpSessionServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HttpSessionServlet1</servlet-name>
+    <url-pattern>/http_session/httpSessionServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HttpSessionServlet2</servlet-name>
+    <servlet-class>http_session.HttpSessionServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HttpSessionServlet2</servlet-name>
+    <url-pattern>/http_session/httpSessionServlet2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>  
+    <description></description>  
+    <display-name>LoginHttpSessionServlet</display-name>  
+    <servlet-name>LoginHttpSessionServlet</servlet-name>  
+    <servlet-class>http_session_login_logout_profile.LoginHttpSessionServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LoginHttpSessionServlet</servlet-name>  
+    <url-pattern>/http_session_login_logout_profile/loginHttpSessionServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet>  
+    <description></description>  
+    <display-name>ProfileHttpSessionServlet</display-name>  
+    <servlet-name>ProfileHttpSessionServlet</servlet-name>  
+    <servlet-class>http_session_login_logout_profile.ProfileHttpSessionServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>ProfileHttpSessionServlet</servlet-name>  
+    <url-pattern>/http_session_login_logout_profile/profileHttpSessionServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet>  
+    <description></description>  
+    <display-name>LogoutHttpSessionServlet</display-name>  
+    <servlet-name>LogoutHttpSessionServlet</servlet-name>  
+    <servlet-class>http_session_login_logout_profile.LogoutHttpSessionServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LogoutHttpSessionServlet</servlet-name>  
+    <url-pattern>/http_session_login_logout_profile/logoutHttpSessionServlet</url-pattern>  
+  </servlet-mapping> 
+  
   <welcome-file-list>
+  	<welcome-file>http_session_login_logout_profile/index.html</welcome-file>
+    <welcome-file>http_session/index.html</welcome-file>
+    <welcome-file>url_rewriting/index.html</welcome-file>
+    <welcome-file>hidden_form_field/index.html</welcome-file>
     <welcome-file>cookie_login_logout_profile/index.html</welcome-file>
     <welcome-file>cookie_in_servlet/index.html</welcome-file>
     <welcome-file>servlet_config/servletConfig1.html</welcome-file>
