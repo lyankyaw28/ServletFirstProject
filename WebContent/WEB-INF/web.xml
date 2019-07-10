@@ -196,40 +196,59 @@
     <servlet-name>HttpSessionServlet2</servlet-name>
     <url-pattern>/http_session/httpSessionServlet2</url-pattern>
   </servlet-mapping>
-  
-  <servlet>  
-    <description></description>  
-    <display-name>LoginHttpSessionServlet</display-name>  
-    <servlet-name>LoginHttpSessionServlet</servlet-name>  
-    <servlet-class>http_session_login_logout_profile.LoginHttpSessionServlet</servlet-class>  
-  </servlet>  
-  <servlet-mapping>  
-    <servlet-name>LoginHttpSessionServlet</servlet-name>  
-    <url-pattern>/http_session_login_logout_profile/loginHttpSessionServlet</url-pattern>  
-  </servlet-mapping>  
-  <servlet>  
-    <description></description>  
-    <display-name>ProfileHttpSessionServlet</display-name>  
-    <servlet-name>ProfileHttpSessionServlet</servlet-name>  
-    <servlet-class>http_session_login_logout_profile.ProfileHttpSessionServlet</servlet-class>  
-  </servlet>  
-  <servlet-mapping>  
-    <servlet-name>ProfileHttpSessionServlet</servlet-name>  
-    <url-pattern>/http_session_login_logout_profile/profileHttpSessionServlet</url-pattern>  
-  </servlet-mapping>  
-  <servlet>  
-    <description></description>  
-    <display-name>LogoutHttpSessionServlet</display-name>  
-    <servlet-name>LogoutHttpSessionServlet</servlet-name>  
-    <servlet-class>http_session_login_logout_profile.LogoutHttpSessionServlet</servlet-class>  
-  </servlet>  
-  <servlet-mapping>  
-    <servlet-name>LogoutHttpSessionServlet</servlet-name>  
-    <url-pattern>/http_session_login_logout_profile/logoutHttpSessionServlet</url-pattern>  
-  </servlet-mapping> 
-  
+  <servlet>
+    <description></description>
+    <display-name>LoginHttpSessionServlet</display-name>
+    <servlet-name>LoginHttpSessionServlet</servlet-name>
+    <servlet-class>http_session_login_logout_profile.LoginHttpSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginHttpSessionServlet</servlet-name>
+    <url-pattern>/http_session_login_logout_profile/loginHttpSessionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProfileHttpSessionServlet</display-name>
+    <servlet-name>ProfileHttpSessionServlet</servlet-name>
+    <servlet-class>http_session_login_logout_profile.ProfileHttpSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfileHttpSessionServlet</servlet-name>
+    <url-pattern>/http_session_login_logout_profile/profileHttpSessionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutHttpSessionServlet</display-name>
+    <servlet-name>LogoutHttpSessionServlet</servlet-name>
+    <servlet-class>http_session_login_logout_profile.LogoutHttpSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutHttpSessionServlet</servlet-name>
+    <url-pattern>/http_session_login_logout_profile/logoutHttpSessionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <servlet-name>HttpSessionLoginLogoutEventServlet1</servlet-name>
+    <servlet-class>http_session_event_listener.HttpSessionLoginLogoutEventServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HttpSessionLoginLogoutEventServlet1</servlet-name>
+    <url-pattern>/http_session_event_listener/httpSessionLoginLogoutEventServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HttpSessionLoginLogoutEventServlet2</servlet-name>
+    <servlet-class>http_session_event_listener.HttpSessionLoginLogoutEventServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HttpSessionLoginLogoutEventServlet2</servlet-name>
+    <url-pattern>/http_session_event_listener/httpSessionLoginLogoutEventServlet2</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>http_session_event_listener.HttpSessionLoginLogoutListener</listener-class>
+  </listener>
   <welcome-file-list>
-  	<welcome-file>http_session_login_logout_profile/index.html</welcome-file>
+    <welcome-file>http_session_event_listener/index.html</welcome-file>
+    <welcome-file>http_session_login_logout_profile/index.html</welcome-file>
     <welcome-file>http_session/index.html</welcome-file>
     <welcome-file>url_rewriting/index.html</welcome-file>
     <welcome-file>hidden_form_field/index.html</welcome-file>
