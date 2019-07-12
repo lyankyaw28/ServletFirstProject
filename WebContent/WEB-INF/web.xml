@@ -284,12 +284,10 @@
 		<servlet-name>FilterConfigServlet</servlet-name>
 		<servlet-class>filter.filter_config.FilterConfigServlet</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>FilterConfigServlet</servlet-name>
 		<url-pattern>/filterConfigServlet</url-pattern>
 	</servlet-mapping>
-
 	<filter>
 		<filter-name>FilterConfigFliter</filter-name>
 		<filter-class>filter.filter_config.FilterConfigFliter</filter-class>
@@ -302,7 +300,6 @@
 		<filter-name>FilterConfigFliter</filter-name>
 		<url-pattern>/filterConfigServlet</url-pattern>
 	</filter-mapping>
-	
 	<servlet>
 		<servlet-name>ResponseByFilterOnlyServlet</servlet-name>
 		<servlet-class>filter.useful_example.ResponseByFilterOnlyServlet</servlet-class>
@@ -319,7 +316,6 @@
 		<filter-name>ResponseByFilterOnly</filter-name>
 		<url-pattern>/responseByFilterOnlyServlet</url-pattern>
 	</filter-mapping>
-	
 	<servlet>
 		<servlet-name>CountByUserServlet</servlet-name>
 		<servlet-class>filter.useful_example.CountByUserServlet</servlet-class>
@@ -336,8 +332,6 @@
 		<filter-name>CountByUser</filter-name>
 		<url-pattern>/countByUserServlet</url-pattern>
 	</filter-mapping>
-	
-	
 	<servlet>
 		<servlet-name>CheckTotalResponseTimeServlet</servlet-name>
 		<servlet-class>filter.useful_example.CheckTotalResponseTimeServlet</servlet-class>
@@ -354,7 +348,58 @@
 		<filter-name>CheckTotalResponseTime</filter-name>
 		<url-pattern>/checkTotalResponseTimeServlet</url-pattern>
 	</filter-mapping>
+	<servlet>
+		<servlet-name>SaveServlet</servlet-name>
+		<servlet-class>crud.SaveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SaveServlet</servlet-name>
+		<url-pattern>/saveServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ViewServlet</servlet-name>
+		<servlet-class>crud.ViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewServlet</servlet-name>
+		<url-pattern>/viewServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditServlet</servlet-name>
+		<servlet-class>crud.EditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditServlet</servlet-name>
+		<url-pattern>/editServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditServlet2</servlet-name>
+		<servlet-class>crud.EditServlet2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditServlet2</servlet-name>
+		<url-pattern>/editServlet2</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>crud.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/deleteServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PaginationServlet</servlet-name>
+		<servlet-class>pagination.PaginationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PaginationServlet</servlet-name>
+		<url-pattern>/paginationServlet</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
+		<welcome-file>pagination/index.html</welcome-file>
+		<welcome-file>crud/index.html</welcome-file>
 		<welcome-file>filter/useful_example/checkTotalResponseTime.html</welcome-file>
 		<welcome-file>filter/useful_example/countByUser.html</welcome-file>
 		<welcome-file>filter/useful_example/responseByFilterOnly.html</welcome-file>
