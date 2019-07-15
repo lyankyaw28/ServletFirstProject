@@ -402,7 +402,26 @@
     <servlet-name>DisplayImageServelt</servlet-name>
     <url-pattern>/displayImageServelt</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>SingleThreadModelServlet</servlet-name>
+    <servlet-class>miscellaneous.single_thread_model.SingleThreadModelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SingleThreadModelServlet</servlet-name>
+    <url-pattern>/singleThreadModelServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>development.register.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/registerServlet</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
+  	<welcome-file>development/register/register.html</welcome-file>
+    <welcome-file>miscellaneous/single_thread_model/index.html</welcome-file>
     <welcome-file>miscellaneous/servletInputOutputStream/index.html</welcome-file>
     <welcome-file>pagination/index.html</welcome-file>
     <welcome-file>crud/index.html</welcome-file>
