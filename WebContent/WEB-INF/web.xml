@@ -419,7 +419,17 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/registerServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>development.fetching_records.Search</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/fetch/Search</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
+  	<welcome-file>development/fetching_records/index.html</welcome-file>
   	<welcome-file>development/register/register.html</welcome-file>
     <welcome-file>miscellaneous/single_thread_model/index.html</welcome-file>
     <welcome-file>miscellaneous/servletInputOutputStream/index.html</welcome-file>

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -21,9 +22,9 @@ public class RegisterServlet extends HttpServlet {
 		String e = request.getParameter("userEmail");
 		String c = request.getParameter("userCountry");
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager
-					.getConnection("jdbc:mysql://localhost/sampledb?" + "user=root&password=root");
+					.getConnection("jdbc:postgresql://localhost/servletdb?" + "user=postgres&password=postgres");
 			PreparedStatement ps = con.prepareStatement("insert into registeruser values(?,?,?,?)");
 			ps.setString(1, n);
 			ps.setString(2, p);
