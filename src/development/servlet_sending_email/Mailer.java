@@ -17,9 +17,9 @@ public class Mailer {
 		final String pass = "shwesinwin";
 
 		// 1st step) Get the session object
-		Properties props = new Properties();
-		props.put("mail.smtp.host", "localhost");// change accordingly
-		props.put("mail.smtp.auth", "true");
+		Properties props = System.getProperties();
+		props.setProperty("mail.smtp.auth", "true");
+		props.setProperty("mail.smtp.host", "8080");
 
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
