@@ -1,4 +1,4 @@
-package send_redirect;
+package servlet_collaboration.send_redirect;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class GoogleSearchServlet2 extends HttpServlet {
+public class DemoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override

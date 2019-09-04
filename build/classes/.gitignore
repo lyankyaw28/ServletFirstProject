@@ -12,12 +12,13 @@
 /http_session_login_logout_profile/
 /miscellaneous/
 /pagination/
-/request_dispatcher/
 /send_redirect/
 /servletContextListener/
+/servlet_collaboration/
 /servlet_config/
 /servlet_context/
 /servlet_event_listener_db_conn/
+/servlet_request/
 /servlet_request_interface/
 /servlet_with_ide/
 /url_rewriting/
