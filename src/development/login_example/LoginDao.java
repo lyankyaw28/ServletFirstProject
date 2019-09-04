@@ -10,8 +10,7 @@ public class LoginDao {
 		boolean status = false;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager
-					.getConnection("jdbc:mysql://localhost/servletcrud?" + "user=root&password=root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/servlet?" + "user=root&password=root");
 
 			PreparedStatement ps = con.prepareStatement("select * from userreg where name=? and pass=?");
 			ps.setString(1, name);

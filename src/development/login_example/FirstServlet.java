@@ -28,7 +28,7 @@ public class FirstServlet extends HttpServlet {
 			rd.forward(request, response);
 		} else {
 			out.print("Sorry username or password error");
-			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			RequestDispatcher rd = request.getRequestDispatcher("development/login_example/index.html");
 			rd.include(request, response);
 		}
 
