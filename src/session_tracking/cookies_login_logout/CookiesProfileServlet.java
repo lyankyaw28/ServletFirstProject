@@ -1,4 +1,4 @@
-package cookie_login_logout_profile;
+package session_tracking.cookies_login_logout;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,7 +8,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-public class CookieProfileServlet extends HttpServlet {
+
+public class CookiesProfileServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -16,7 +17,7 @@ public class CookieProfileServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
-		request.getRequestDispatcher("cookie_login_logout_profile/link.html").include(request, response);
+		request.getRequestDispatcher("session_tracking/cookies_login_logout/link.html").include(request, response);
 
 		Cookie ck[] = request.getCookies();
 		if (ck != null) {
@@ -27,7 +28,7 @@ public class CookieProfileServlet extends HttpServlet {
 			}
 		} else {
 			out.print("Please login first");
-			request.getRequestDispatcher("cookie_login_logout_profile/login.html").include(request, response);
+			request.getRequestDispatcher("session_tracking/cookies_login_logout/login.html").include(request, response);
 		}
 		out.close();
 	}

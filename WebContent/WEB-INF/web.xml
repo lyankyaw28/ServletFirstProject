@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-	
+
 	<!-- 1.1 servlet_collaboration/request_dispatcher -->
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
@@ -21,7 +21,7 @@
 		<url-pattern>/welcomeServlet</url-pattern>
 	</servlet-mapping>
 	<!-- 1.1 servlet_collaboration/request_dispatcher -->
-	
+
 	<!-- 1.2 servlet_collaboration/send_redirect -->
 	<servlet>
 		<servlet-name>DemoServlet</servlet-name>
@@ -32,7 +32,7 @@
 		<url-pattern>/DemoServlet</url-pattern>
 	</servlet-mapping>
 	<!-- 1.2 servlet_collaboration/send_redirect -->
-	
+
 	<!-- 2.1 servlet_config/init_param -->
 	<servlet>
 		<servlet-name>ServletConfigInitParamServlet</servlet-name>
@@ -47,67 +47,67 @@
 		<url-pattern>/ServletConfigInitParamServlet</url-pattern>
 	</servlet-mapping>
 	<!-- 2.1 servlet_config/init_param -->
-	
+
 	<!-- 2.2 servlet_config/all_init_param -->
-	<servlet>  
-		<servlet-name>ServletConfigAllInitParamServlet</servlet-name>  
-		<servlet-class>servlet_config.all_init_param.ServletConfigAllInitParamServlet</servlet-class>  
-		  
-		<init-param>  
-			<param-name>username</param-name>  
-			<param-value>system</param-value>  
-		</init-param>  
-		  
-		<init-param>  
-			<param-name>password</param-name>  
-			<param-value>oracle</param-value>  
-		</init-param>  
-	</servlet>  
-		  
-	<servlet-mapping>  
-		<servlet-name>ServletConfigAllInitParamServlet</servlet-name>  
-		<url-pattern>/ServletConfigAllInitParamServlet</url-pattern>  
-	</servlet-mapping>  
-	<!-- 2.2 servlet_config/all_init_param -->
-	
-	<!-- 3.1 servlet_context/init_param -->
-	<servlet>  
-		<servlet-name>ServletContextInitParamServlet</servlet-name>  
-		<servlet-class>servlet_context.init_param.ServletContextInitParamServlet</servlet-class>  
+	<servlet>
+		<servlet-name>ServletConfigAllInitParamServlet</servlet-name>
+		<servlet-class>servlet_config.all_init_param.ServletConfigAllInitParamServlet</servlet-class>
+
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>system</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>oracle</param-value>
+		</init-param>
 	</servlet>
-	<context-param>  
-		<param-name>driver</param-name>  
-		<param-value>Lyan Kyaw</param-value>  
-	</context-param>  
-	<servlet-mapping>  
-		<servlet-name>ServletContextInitParamServlet</servlet-name>  
-		<url-pattern>/ServletContextInitParamServlet</url-pattern>  
+
+	<servlet-mapping>
+		<servlet-name>ServletConfigAllInitParamServlet</servlet-name>
+		<url-pattern>/ServletConfigAllInitParamServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 2.2 servlet_config/all_init_param -->
+
+	<!-- 3.1 servlet_context/init_param -->
+	<servlet>
+		<servlet-name>ServletContextInitParamServlet</servlet-name>
+		<servlet-class>servlet_context.init_param.ServletContextInitParamServlet</servlet-class>
+	</servlet>
+	<context-param>
+		<param-name>driver</param-name>
+		<param-value>Lyan Kyaw</param-value>
+	</context-param>
+	<servlet-mapping>
+		<servlet-name>ServletContextInitParamServlet</servlet-name>
+		<url-pattern>/ServletContextInitParamServlet</url-pattern>
 	</servlet-mapping>
 	<!-- 3.1 servlet_context/init_param -->
-	
+
 	<!-- 3.2 servlet_context/all_init_param -->
-	<servlet>  
-		<servlet-name>ServletContextAllInitParamServlet</servlet-name>  
-		<servlet-class>servlet_context.all_init_param.ServletContextAllInitParamServlet</servlet-class>  
-	</servlet>  
-	<context-param>  
-		<param-name>dname</param-name>  
-		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
-	</context-param>  
-	<context-param>  
-		<param-name>username</param-name>  
-		<param-value>system</param-value>  
-	</context-param>  
-	<context-param>  
-		<param-name>password</param-name>  
-		<param-value>oracle</param-value>  
-	</context-param>  
-	<servlet-mapping>  
-		<servlet-name>ServletContextAllInitParamServlet</servlet-name>  
-		<url-pattern>/ServletContextAllInitParamServlet</url-pattern>  
+	<servlet>
+		<servlet-name>ServletContextAllInitParamServlet</servlet-name>
+		<servlet-class>servlet_context.all_init_param.ServletContextAllInitParamServlet</servlet-class>
+	</servlet>
+	<context-param>
+		<param-name>dname</param-name>
+		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>username</param-name>
+		<param-value>system</param-value>
+	</context-param>
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>oracle</param-value>
+	</context-param>
+	<servlet-mapping>
+		<servlet-name>ServletContextAllInitParamServlet</servlet-name>
+		<url-pattern>/ServletContextAllInitParamServlet</url-pattern>
 	</servlet-mapping>
 	<!-- 3.2 servlet_context/all_init_param -->
-	
+
 	<!-- 4.1 attribute -->
 	<servlet>
 		<servlet-name>AttributeServlet</servlet-name>
@@ -126,26 +126,59 @@
 		<url-pattern>/attributeServlet2</url-pattern>
 	</servlet-mapping>
 	<!-- 4.1 attribute -->
-	
+
 	<!-- 5.1 session_tracking/cookies -->
-	<servlet>  
-		<servlet-name>CookiesServlet1</servlet-name>  
-		<servlet-class>session_tracking.cookies.CookiesServlet1</servlet-class>  
-	</servlet>  
-	<servlet-mapping>  
-		<servlet-name>CookiesServlet1</servlet-name>  
-		<url-pattern>/cookiesServlet1</url-pattern>  
-	</servlet-mapping>  
-	<servlet>  
-		<servlet-name>CookiesServlet2</servlet-name>  
-		<servlet-class>session_tracking.cookies.CookiesServlet2</servlet-class>  
-	</servlet>  
-	<servlet-mapping>  
-		<servlet-name>CookiesServlet2</servlet-name>  
-		<url-pattern>/cookiesServlet2</url-pattern>  
+	<servlet>
+		<servlet-name>CookiesServlet1</servlet-name>
+		<servlet-class>session_tracking.cookies.CookiesServlet1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CookiesServlet1</servlet-name>
+		<url-pattern>/cookiesServlet1</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CookiesServlet2</servlet-name>
+		<servlet-class>session_tracking.cookies.CookiesServlet2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CookiesServlet2</servlet-name>
+		<url-pattern>/cookiesServlet2</url-pattern>
 	</servlet-mapping>
 	<!-- 5.1 session_tracking/cookies -->
-	
+
+	<!-- 5.2 session_tracking/cookies_login_logout -->
+	<servlet>
+		<description></description>
+		<display-name>CookiesLoginServlet</display-name>
+		<servlet-name>CookiesLoginServlet</servlet-name>
+		<servlet-class>session_tracking.cookies_login_logout.CookiesLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CookiesLoginServlet</servlet-name>
+		<url-pattern>/cookiesLoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>CookiesProfileServlet</display-name>
+		<servlet-name>CookiesProfileServlet</servlet-name>
+		<servlet-class>session_tracking.cookies_login_logout.CookiesProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CookiesProfileServlet</servlet-name>
+		<url-pattern>/cookiesProfileServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>CookiesLogoutServlet</display-name>
+		<servlet-name>CookiesLogoutServlet</servlet-name>
+		<servlet-class>session_tracking.cookies_login_logout.CookiesLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CookiesLogoutServlet</servlet-name>
+		<url-pattern>/cookiesLogoutServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 5.2 session_tracking/cookies_login_logout -->
+
 	<servlet>
 		<servlet-name>CookieLoginServlet</servlet-name>
 		<servlet-class>cookie_login_logout_profile.CookieLoginServlet</servlet-class>
@@ -524,30 +557,33 @@
 		<url-pattern>/demoServ</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+		<!-- 5.2 session_tracking/cookies_login_logout -->
+		<welcome-file>session_tracking/cookies_login_logout/index.html</welcome-file>
+		
 		<!-- 5.1 session_tracking/cookies -->
 		<welcome-file>session_tracking/cookies/index.html</welcome-file>
-		
+
 		<!-- 4.1 attribute -->
 		<welcome-file>attribute/attribute.html</welcome-file>
-		
+
 		<!-- 3.2 servlet_context/all_init_param -->
 		<welcome-file>servlet_context/all_init_param/allInitParamServletContext.html</welcome-file>
-		
+
 		<!-- 3.1 servlet_context/init_param -->
 		<welcome-file>servlet_context/init_param/initParamServletContext.html</welcome-file>
-	
+
 		<!-- 2.2 servlet_config/all_init_param -->
 		<welcome-file>servlet_config/all_init_param/allInitParamServletConfig.html</welcome-file>
-		
+
 		<!-- 2.1 servlet_config/init_param -->
 		<welcome-file>servlet_config/init_param/initParamServletConfig.html</welcome-file>
-		
+
 		<!-- 1.2 servlet_collaboration/send_redirect -->
 		<welcome-file>servlet_collaboration/send_redirect/googleSearcher.html</welcome-file>
-		
+
 		<!-- 1.1 servlet_collaboration/request_dispatcher -->
 		<welcome-file>servlet_collaboration/request_dispatcher/login.html</welcome-file>
-		
+
 		<welcome-file>servlet_request/index.html</welcome-file>
 		<welcome-file>development/writing_image/index.html</welcome-file>
 		<welcome-file>development/login_example/index.html</welcome-file>
