@@ -12,18 +12,12 @@ public class AttributeServlet2 extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) {
 		try {
-
 			res.setContentType("text/html");
 			PrintWriter out = res.getWriter();
-
 			ServletContext context = getServletContext();
-			
-			// attributeServlet2 က attributeServlet1 ရဲ႕ attribute ကို value ကို ရဖို႔ name နဲ႔ လွမ္းေခၚလိုက္တယ္။အဲ့ဆို value ပါလာမယ္
 			String n = (String) context.getAttribute("company");
-
 			out.println("Welcome to " + n);
 			out.close();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

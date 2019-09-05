@@ -108,6 +108,7 @@
 	</servlet-mapping>
 	<!-- 3.2 servlet_context/all_init_param -->
 	
+	<!-- 4.1 attribute -->
 	<servlet>
 		<servlet-name>AttributeServlet</servlet-name>
 		<servlet-class>attribute.AttributeServlet</servlet-class>
@@ -124,22 +125,27 @@
 		<servlet-name>AttributeServlet2</servlet-name>
 		<url-pattern>/attributeServlet2</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>CookieInServlet1</servlet-name>
-		<servlet-class>cookie_in_servlet.CookieInServlet1</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CookieInServlet1</servlet-name>
-		<url-pattern>/cookieInServlet1</url-pattern>
+	<!-- 4.1 attribute -->
+	
+	<!-- 5.1 session_tracking/cookies -->
+	<servlet>  
+		<servlet-name>CookiesServlet1</servlet-name>  
+		<servlet-class>session_tracking.cookies.CookiesServlet1</servlet-class>  
+	</servlet>  
+	<servlet-mapping>  
+		<servlet-name>CookiesServlet1</servlet-name>  
+		<url-pattern>/cookiesServlet1</url-pattern>  
+	</servlet-mapping>  
+	<servlet>  
+		<servlet-name>CookiesServlet2</servlet-name>  
+		<servlet-class>session_tracking.cookies.CookiesServlet2</servlet-class>  
+	</servlet>  
+	<servlet-mapping>  
+		<servlet-name>CookiesServlet2</servlet-name>  
+		<url-pattern>/cookiesServlet2</url-pattern>  
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>CookieInServlet2</servlet-name>
-		<servlet-class>cookie_in_servlet.CookieInServlet2</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CookieInServlet2</servlet-name>
-		<url-pattern>/cookieInServlet2</url-pattern>
-	</servlet-mapping>
+	<!-- 5.1 session_tracking/cookies -->
+	
 	<servlet>
 		<servlet-name>CookieLoginServlet</servlet-name>
 		<servlet-class>cookie_login_logout_profile.CookieLoginServlet</servlet-class>
@@ -518,6 +524,12 @@
 		<url-pattern>/demoServ</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+		<!-- 5.1 session_tracking/cookies -->
+		<welcome-file>session_tracking/cookies/index.html</welcome-file>
+		
+		<!-- 4.1 attribute -->
+		<welcome-file>attribute/attribute.html</welcome-file>
+		
 		<!-- 3.2 servlet_context/all_init_param -->
 		<welcome-file>servlet_context/all_init_param/allInitParamServletContext.html</welcome-file>
 		
@@ -564,10 +576,5 @@
 		<welcome-file>cookie_in_servlet/index.html</welcome-file>
 		<welcome-file>servlet_config/servletConfig1.html</welcome-file>
 		<welcome-file>attribute/attribute.html</welcome-file>
-		<welcome-file>servlet_context/servletContext2.html</welcome-file>
-		
-		
-		
-		<welcome-file>servlet_with_ide/index.html</welcome-file>
 	</welcome-file-list>
 </web-app>

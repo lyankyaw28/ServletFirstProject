@@ -1,4 +1,4 @@
-package cookie_in_servlet;
+package session_tracking.cookies;
 
 import java.io.PrintWriter;
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CookieInServlet1 extends HttpServlet {
+public class CookiesServlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) {
@@ -23,7 +23,7 @@ public class CookieInServlet1 extends HttpServlet {
 			response.addCookie(ck);// adding cookie in the response
 
 			// creating submit button
-			out.print("<form action='/ServletFirstProject/cookieInServlet2' method='POST'>");
+			out.print("<form action='cookiesServlet2'>");
 			out.print("<input type='submit' value='go'>");
 			out.print("</form>");
 

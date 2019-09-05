@@ -14,20 +14,13 @@ public class AttributeServlet extends HttpServlet {
 		try {
 			res.setContentType("text/html");
 			PrintWriter out = res.getWriter();
-
 			ServletContext context = getServletContext();
-			//attributeServlet ရဲ႕ name က company value က IBM ကိုထည့္ေပးလိုက္တယ္
 			context.setAttribute("company", "IBM");
-
 			out.println("Welcome to first servlet");
-			
-			//ဒီ code က link ႏွိပ္လိုက္ရင္ servlet ကို ကူးတဲ့ code
 			out.println("<a href='attributeServlet2'>visit</a>");
 			out.close();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 }
