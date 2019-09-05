@@ -33,66 +33,81 @@
 	</servlet-mapping>
 	<!-- 1.2 servlet_collaboration/send_redirect -->
 	
+	<!-- 2.1 servlet_config/init_param -->
 	<servlet>
-		<servlet-name>ServletConfig1</servlet-name>
-		<servlet-class>servlet_config.ServletConfig1</servlet-class>
+		<servlet-name>ServletConfigInitParamServlet</servlet-name>
+		<servlet-class>servlet_config.init_param.ServletConfigInitParamServlet</servlet-class>
 		<init-param>
 			<param-name>driver</param-name>
 			<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ServletConfig1</servlet-name>
-		<url-pattern>/servletConfig1</url-pattern>
+		<servlet-name>ServletConfigInitParamServlet</servlet-name>
+		<url-pattern>/ServletConfigInitParamServlet</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>ServletConfig2</servlet-name>
-		<servlet-class>servlet_config.ServletConfig2</servlet-class>
-		<init-param>
-			<param-name>username</param-name>
-			<param-value>system</param-value>
-		</init-param>
-		<init-param>
-			<param-name>password</param-name>
-			<param-value>oracle</param-value>
-		</init-param>
+	<!-- 2.1 servlet_config/init_param -->
+	
+	<!-- 2.2 servlet_config/all_init_param -->
+	<servlet>  
+		<servlet-name>ServletConfigAllInitParamServlet</servlet-name>  
+		<servlet-class>servlet_config.all_init_param.ServletConfigAllInitParamServlet</servlet-class>  
+		  
+		<init-param>  
+			<param-name>username</param-name>  
+			<param-value>system</param-value>  
+		</init-param>  
+		  
+		<init-param>  
+			<param-name>password</param-name>  
+			<param-value>oracle</param-value>  
+		</init-param>  
+	</servlet>  
+		  
+	<servlet-mapping>  
+		<servlet-name>ServletConfigAllInitParamServlet</servlet-name>  
+		<url-pattern>/ServletConfigAllInitParamServlet</url-pattern>  
+	</servlet-mapping>  
+	<!-- 2.2 servlet_config/all_init_param -->
+	
+	<!-- 3.1 servlet_context/init_param -->
+	<servlet>  
+		<servlet-name>ServletContextInitParamServlet</servlet-name>  
+		<servlet-class>servlet_context.init_param.ServletContextInitParamServlet</servlet-class>  
 	</servlet>
-	<servlet-mapping>
-		<servlet-name>ServletConfig2</servlet-name>
-		<url-pattern>/servletConfig2</url-pattern>
+	<context-param>  
+		<param-name>driver</param-name>  
+		<param-value>Lyan Kyaw</param-value>  
+	</context-param>  
+	<servlet-mapping>  
+		<servlet-name>ServletContextInitParamServlet</servlet-name>  
+		<url-pattern>/ServletContextInitParamServlet</url-pattern>  
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>ServletContext1</servlet-name>
-		<servlet-class>servlet_context.ServletContext1</servlet-class>
-	</servlet>
-	<context-param>
-		<param-name>dname</param-name>
-		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
-	</context-param>
-	<servlet-mapping>
-		<servlet-name>ServletContext1</servlet-name>
-		<url-pattern>/servletContext1</url-pattern>
+	<!-- 3.1 servlet_context/init_param -->
+	
+	<!-- 3.2 servlet_context/all_init_param -->
+	<servlet>  
+		<servlet-name>ServletContextAllInitParamServlet</servlet-name>  
+		<servlet-class>servlet_context.all_init_param.ServletContextAllInitParamServlet</servlet-class>  
+	</servlet>  
+	<context-param>  
+		<param-name>dname</param-name>  
+		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
+	</context-param>  
+	<context-param>  
+		<param-name>username</param-name>  
+		<param-value>system</param-value>  
+	</context-param>  
+	<context-param>  
+		<param-name>password</param-name>  
+		<param-value>oracle</param-value>  
+	</context-param>  
+	<servlet-mapping>  
+		<servlet-name>ServletContextAllInitParamServlet</servlet-name>  
+		<url-pattern>/ServletContextAllInitParamServlet</url-pattern>  
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>ServletContext2</servlet-name>
-		<servlet-class>servlet_context.ServletContext2</servlet-class>
-	</servlet>
-	<context-param>
-		<param-name>dname</param-name>
-		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
-	</context-param>
-	<context-param>
-		<param-name>username</param-name>
-		<param-value>system</param-value>
-	</context-param>
-	<context-param>
-		<param-name>password</param-name>
-		<param-value>oracle</param-value>
-	</context-param>
-	<servlet-mapping>
-		<servlet-name>ServletContext2</servlet-name>
-		<url-pattern>/servletContext2</url-pattern>
-	</servlet-mapping>
+	<!-- 3.2 servlet_context/all_init_param -->
+	
 	<servlet>
 		<servlet-name>AttributeServlet</servlet-name>
 		<servlet-class>attribute.AttributeServlet</servlet-class>
@@ -503,12 +518,23 @@
 		<url-pattern>/demoServ</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+		<!-- 3.2 servlet_context/all_init_param -->
+		<welcome-file>servlet_context/all_init_param/allInitParamServletContext.html</welcome-file>
+		
+		<!-- 3.1 servlet_context/init_param -->
+		<welcome-file>servlet_context/init_param/initParamServletContext.html</welcome-file>
+	
+		<!-- 2.2 servlet_config/all_init_param -->
+		<welcome-file>servlet_config/all_init_param/allInitParamServletConfig.html</welcome-file>
+		
+		<!-- 2.1 servlet_config/init_param -->
+		<welcome-file>servlet_config/init_param/initParamServletConfig.html</welcome-file>
+		
 		<!-- 1.2 servlet_collaboration/send_redirect -->
 		<welcome-file>servlet_collaboration/send_redirect/googleSearcher.html</welcome-file>
 		
 		<!-- 1.1 servlet_collaboration/request_dispatcher -->
 		<welcome-file>servlet_collaboration/request_dispatcher/login.html</welcome-file>
-		
 		
 		<welcome-file>servlet_request/index.html</welcome-file>
 		<welcome-file>development/writing_image/index.html</welcome-file>
@@ -539,8 +565,8 @@
 		<welcome-file>servlet_config/servletConfig1.html</welcome-file>
 		<welcome-file>attribute/attribute.html</welcome-file>
 		<welcome-file>servlet_context/servletContext2.html</welcome-file>
-		<welcome-file>servlet_context/servletContext1.html</welcome-file>
-		<welcome-file>servlet_config/servletConfig2.html</welcome-file>
+		
+		
 		
 		<welcome-file>servlet_with_ide/index.html</welcome-file>
 	</welcome-file-list>
