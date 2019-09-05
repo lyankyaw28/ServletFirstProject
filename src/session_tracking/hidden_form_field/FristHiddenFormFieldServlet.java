@@ -1,13 +1,12 @@
-package http_session;
+package session_tracking.hidden_form_field;
 
 import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class HttpSessionServlet1 extends HttpServlet {
+public class FristHiddenFormFieldServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) {
@@ -19,11 +18,10 @@ public class HttpSessionServlet1 extends HttpServlet {
 			String n = request.getParameter("userName");
 			out.print("Welcome " + n);
 
-			HttpSession session = request.getSession();
-			session.setAttribute("uname", n);
-
-			out.print("<a href='httpSessionServlet2'>visit</a>");
-
+			out.print("<form action='/ServletFirstProject/secondHiddenFormFieldServlet'>");
+			out.print("<input type='hidden' name='uname' value='" + n + "'>");
+			out.print("<input type='submit' value='go'>");
+			out.print("</form>");
 			out.close();
 
 		} catch (Exception e) {

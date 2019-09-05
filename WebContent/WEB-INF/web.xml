@@ -179,78 +179,63 @@
 	</servlet-mapping>
 	<!-- 5.2 session_tracking/cookies_login_logout -->
 
+	<!-- 5.3 session_tracking/hidden_form_field -->
 	<servlet>
-		<servlet-name>CookieLoginServlet</servlet-name>
-		<servlet-class>cookie_login_logout_profile.CookieLoginServlet</servlet-class>
+		<servlet-name>FristHiddenFormFieldServlet</servlet-name>
+		<servlet-class>session_tracking.hidden_form_field.FristHiddenFormFieldServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CookieLoginServlet</servlet-name>
-		<url-pattern>/cookieLoginServlet</url-pattern>
+		<servlet-name>FristHiddenFormFieldServlet</servlet-name>
+		<url-pattern>/fristHiddenFormFieldServlet</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>CookieProfileServlet</servlet-name>
-		<servlet-class>cookie_login_logout_profile.CookieProfileServlet</servlet-class>
+		<servlet-name>SecondHiddenFormFieldServlet</servlet-name>
+		<servlet-class>session_tracking.hidden_form_field.SecondHiddenFormFieldServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CookieProfileServlet</servlet-name>
-		<url-pattern>/cookieProfileServlet</url-pattern>
+		<servlet-name>SecondHiddenFormFieldServlet</servlet-name>
+		<url-pattern>/secondHiddenFormFieldServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 5.3 session_tracking/hidden_form_field -->
+
+	<!-- 5.4 session_tracking/url_rewriting -->
+	<servlet>
+		<servlet-name>FirstUrlRewritingServlet</servlet-name>
+		<servlet-class>session_tracking.url_rewriting.FirstUrlRewritingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FirstUrlRewritingServlet</servlet-name>
+		<url-pattern>/firstUrlRewritingServlet</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>CookieLogoutServlet</servlet-name>
-		<servlet-class>cookie_login_logout_profile.CookieLogoutServlet</servlet-class>
+		<servlet-name>SecondUrlRewritingServlet</servlet-name>
+		<servlet-class>session_tracking.url_rewriting.SecondUrlRewritingServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CookieLogoutServlet</servlet-name>
-		<url-pattern>/cookieLogoutServlet</url-pattern>
+		<servlet-name>SecondUrlRewritingServlet</servlet-name>
+		<url-pattern>/secondUrlRewritingServlet</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>HiddenFormField1</servlet-name>
-		<servlet-class>hidden_form_field.HiddenFormField1</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HiddenFormField1</servlet-name>
-		<url-pattern>/hidden_form_field/HiddenFormField1</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>HiddenFormField2</servlet-name>
-		<servlet-class>hidden_form_field.HiddenFormField2</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HiddenFormField2</servlet-name>
-		<url-pattern>/hidden_form_field/HiddenFormField2</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>UrlRewritingServlet1</servlet-name>
-		<servlet-class>url_rewriting.UrlRewritingServlet1</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UrlRewritingServlet1</servlet-name>
-		<url-pattern>/url_rewriting/urlRewritingServlet1</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>UrlRewritingServlet2</servlet-name>
-		<servlet-class>url_rewriting.UrlRewritingServlet2</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UrlRewritingServlet2</servlet-name>
-		<url-pattern>/url_rewriting/urlRewritingServlet2</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>HttpSessionServlet1</servlet-name>
-		<servlet-class>http_session.HttpSessionServlet1</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HttpSessionServlet1</servlet-name>
-		<url-pattern>/http_session/httpSessionServlet1</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>HttpSessionServlet2</servlet-name>
-		<servlet-class>http_session.HttpSessionServlet2</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HttpSessionServlet2</servlet-name>
-		<url-pattern>/http_session/httpSessionServlet2</url-pattern>
-	</servlet-mapping>
+	<!-- 5.4 session_tracking/url_rewriting -->
+	
+	<!-- 5.5 session_tracking/http_session -->
+	<servlet>  
+		<servlet-name>FirstHttpSessionServlet</servlet-name>  
+		<servlet-class>session_tracking.http_session.FirstHttpSessionServlet</servlet-class>  
+	</servlet>  
+	<servlet-mapping>  
+		<servlet-name>FirstHttpSessionServlet</servlet-name>  
+		<url-pattern>/firstHttpSessionServlet</url-pattern>  
+	</servlet-mapping>  
+	<servlet>  
+		<servlet-name>SecondHttpSessionServlet</servlet-name>  
+		<servlet-class>session_tracking.http_session.SecondHttpSessionServlet</servlet-class>  
+	</servlet>  
+	<servlet-mapping>  
+		<servlet-name>SecondHttpSessionServlet</servlet-name>  
+		<url-pattern>/secondHttpSessionServlet</url-pattern>  
+	</servlet-mapping>  
+	<!-- 5.5 session_tracking/http_session -->
+
 	<servlet>
 		<description></description>
 		<display-name>LoginHttpSessionServlet</display-name>
@@ -557,9 +542,18 @@
 		<url-pattern>/demoServ</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+		<!-- 5.5 session_tracking/http_session -->
+		<welcome-file>session_tracking/http_session/index.html</welcome-file>
+		
+		<!-- 5.4 session_tracking/url_rewriting -->
+		<welcome-file>session_tracking/url_rewriting/index.html</welcome-file>
+		
+		<!-- 5.3 session_tracking/hidden_form_field -->
+		<welcome-file>session_tracking/hidden_form_field/index.html</welcome-file>
+
 		<!-- 5.2 session_tracking/cookies_login_logout -->
 		<welcome-file>session_tracking/cookies_login_logout/index.html</welcome-file>
-		
+
 		<!-- 5.1 session_tracking/cookies -->
 		<welcome-file>session_tracking/cookies/index.html</welcome-file>
 
