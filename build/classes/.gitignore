@@ -1,11 +1,10 @@
 /Servlet Documentation.docx
-/Test.class
 /attribute/
 /crud/
 /development/
+/event_and_listener/
 /filter/
 /http_session_event_listener/
-/http_session_login_logout_profile/
 /miscellaneous/
 /pagination/
 /servletContextListener/
@@ -16,3 +15,5 @@
 /servlet_request/
 /servlet_request_interface/
 /session_tracking/
+/~$rvlet Documentation.docx
+/Test.class

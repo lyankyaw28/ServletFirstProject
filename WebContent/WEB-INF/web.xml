@@ -268,54 +268,43 @@
 		<url-pattern>/HttpSessionLogoutServlet</url-pattern>
 	</servlet-mapping>
 	<!-- 5.6 session_tracking/http_session_login_logout -->
+	
+	<!-- 6.1 event_and_listener/servlet_context_event_listener -->
+	<servlet>  
+		<servlet-name>ServletContextEventServlet</servlet-name>  
+		<servlet-class>event_and_listener.servlet_context_event_listener.ServletContextEventServlet</servlet-class>  
+	</servlet>
+	<listener>
+		<listener-class>event_and_listener.servlet_context_event_listener.ServletContextMyListener</listener-class>
+	</listener>
+	<servlet-mapping>
+		<servlet-name>ServletContextEventServlet</servlet-name>  
+		<url-pattern>/servletContextEventServlet</url-pattern>  
+	</servlet-mapping>
+	<!-- 6.1 event_and_listener/servlet_context_event_listener -->
+	
+	<!-- 6.2 event_and_listener/http_session_event_listener -->
+	<servlet>  
+		<servlet-name>HttpSessionEventServlet1</servlet-name>  
+		<servlet-class>event_and_listener.http_session_event_listener.HttpSessionEventServlet1</servlet-class>  
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpSessionEventServlet1</servlet-name>  
+		<url-pattern>/httpSessionEventServlet1</url-pattern>  
+	</servlet-mapping>
+	<servlet>  
+		<servlet-name>HttpSessionEventServlet2</servlet-name>  
+		<servlet-class>event_and_listener.http_session_event_listener.HttpSessionEventServlet2</servlet-class>  
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpSessionEventServlet2</servlet-name>  
+		<url-pattern>/httpSessionEventServlet2</url-pattern>  
+	</servlet-mapping>
+	<listener>
+		<listener-class>event_and_listener.http_session_event_listener.HttpSessionMyListener</listener-class>
+	</listener>
+	<!-- 6.2 event_and_listener/http_session_event_listener -->
 
-	<servlet>
-		<description></description>
-		<display-name>LoginHttpSessionServlet</display-name>
-		<servlet-name>LoginHttpSessionServlet</servlet-name>
-		<servlet-class>http_session_login_logout_profile.LoginHttpSessionServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>LoginHttpSessionServlet</servlet-name>
-		<url-pattern>/http_session_login_logout_profile/loginHttpSessionServlet</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<description></description>
-		<display-name>ProfileHttpSessionServlet</display-name>
-		<servlet-name>ProfileHttpSessionServlet</servlet-name>
-		<servlet-class>http_session_login_logout_profile.ProfileHttpSessionServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ProfileHttpSessionServlet</servlet-name>
-		<url-pattern>/http_session_login_logout_profile/profileHttpSessionServlet</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<description></description>
-		<display-name>LogoutHttpSessionServlet</display-name>
-		<servlet-name>LogoutHttpSessionServlet</servlet-name>
-		<servlet-class>http_session_login_logout_profile.LogoutHttpSessionServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>LogoutHttpSessionServlet</servlet-name>
-		<url-pattern>/http_session_login_logout_profile/logoutHttpSessionServlet</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<description></description>
-		<servlet-name>HttpSessionLoginLogoutEventServlet1</servlet-name>
-		<servlet-class>http_session_event_listener.HttpSessionLoginLogoutEventServlet1</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HttpSessionLoginLogoutEventServlet1</servlet-name>
-		<url-pattern>/http_session_event_listener/httpSessionLoginLogoutEventServlet1</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>HttpSessionLoginLogoutEventServlet2</servlet-name>
-		<servlet-class>http_session_event_listener.HttpSessionLoginLogoutEventServlet2</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HttpSessionLoginLogoutEventServlet2</servlet-name>
-		<url-pattern>/http_session_event_listener/httpSessionLoginLogoutEventServlet2</url-pattern>
-	</servlet-mapping>
 	<listener>
 		<listener-class>http_session_event_listener.HttpSessionLoginLogoutListener</listener-class>
 	</listener>
@@ -575,6 +564,12 @@
 		<url-pattern>/demoServ</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+		<!-- 6.2 event_and_listener/http_session_event_listener -->
+		<welcome-file>event_and_listener/http_session_event_listener/index.html</welcome-file>
+		
+		<!-- 6.1 session_tracking/http_session -->
+		<welcome-file>event_and_listener/servlet_context_event_listener/index.html</welcome-file>
+		
 		<!-- 5.6 session_tracking/http_session_login_logout -->
 		<welcome-file>session_tracking/http_session_login_logout/index.html</welcome-file>
 		
