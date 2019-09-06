@@ -1,4 +1,4 @@
-package http_session_login_logout_profile;
+package session_tracking.http_session_login_logout;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class LoginHttpSessionServlet extends HttpServlet {
+public class HttpSessionLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		request.getRequestDispatcher("link.html").include(request, response);
+		request.getRequestDispatcher("session_tracking/http_session_login_logout/link.html").include(request, response);
 
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
@@ -27,7 +27,7 @@ public class LoginHttpSessionServlet extends HttpServlet {
 			session.setAttribute("name", name);
 		} else {
 			out.print("Sorry, username or password error!");
-			request.getRequestDispatcher("login.html").include(request, response);
+			request.getRequestDispatcher("session_tracking/http_session_login_logout/login.html").include(request, response);
 		}
 		out.close();
 	}

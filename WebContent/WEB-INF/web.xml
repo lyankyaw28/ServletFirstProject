@@ -235,6 +235,39 @@
 		<url-pattern>/secondHttpSessionServlet</url-pattern>  
 	</servlet-mapping>  
 	<!-- 5.5 session_tracking/http_session -->
+	
+	<!-- 5.6 session_tracking/http_session_login_logout -->
+	<servlet>
+		<description></description>
+		<display-name>HttpSessionLoginServlet</display-name>
+		<servlet-name>HttpSessionLoginServlet</servlet-name>
+		<servlet-class>session_tracking.http_session_login_logout.HttpSessionLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpSessionLoginServlet</servlet-name>
+		<url-pattern>/HttpSessionLoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>HttpSessionProfileServlet</display-name>
+		<servlet-name>HttpSessionProfileServlet</servlet-name>
+		<servlet-class>session_tracking.http_session_login_logout.HttpSessionProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpSessionProfileServlet</servlet-name>
+		<url-pattern>/HttpSessionProfileServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>HttpSessionLogoutServlet</display-name>
+		<servlet-name>HttpSessionLogoutServlet</servlet-name>
+		<servlet-class>session_tracking.http_session_login_logout.HttpSessionLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpSessionLogoutServlet</servlet-name>
+		<url-pattern>/HttpSessionLogoutServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 5.6 session_tracking/http_session_login_logout -->
 
 	<servlet>
 		<description></description>
@@ -542,6 +575,9 @@
 		<url-pattern>/demoServ</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+		<!-- 5.6 session_tracking/http_session_login_logout -->
+		<welcome-file>session_tracking/http_session_login_logout/index.html</welcome-file>
+		
 		<!-- 5.5 session_tracking/http_session -->
 		<welcome-file>session_tracking/http_session/index.html</welcome-file>
 		

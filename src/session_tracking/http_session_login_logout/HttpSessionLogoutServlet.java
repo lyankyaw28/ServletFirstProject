@@ -1,4 +1,4 @@
-package http_session_login_logout_profile;
+package session_tracking.http_session_login_logout;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class LogoutHttpSessionServlet extends HttpServlet {
+public class HttpSessionLogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -17,7 +17,7 @@ public class LogoutHttpSessionServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
-		request.getRequestDispatcher("link.html").include(request, response);
+		request.getRequestDispatcher("session_tracking/http_session_login_logout/link.html").include(request, response);
 
 		HttpSession session = request.getSession();
 		session.invalidate();
