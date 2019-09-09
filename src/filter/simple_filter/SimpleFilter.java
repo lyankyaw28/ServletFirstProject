@@ -20,9 +20,8 @@ public class SimpleFilter implements Filter {
 		PrintWriter out = resp.getWriter();
 		out.print("filter is invoked before");
 
-		chain.doFilter(req, resp);// servlet ဆီကိုသြားတယ္
+		chain.doFilter(req, resp);
 		
-		//servlet ဆီကေနၿပန္လာတယ္
 		out.print("filter is invoked after");
 	}
 

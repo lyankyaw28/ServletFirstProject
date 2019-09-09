@@ -20,7 +20,6 @@ public class FilterConfigFliter implements Filter {
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {
 		PrintWriter out = resp.getWriter();
-		//parameter ေပးလိုက္ရင္ အဲ့ parameter နဲ႔တူတဲ့ param element ကို web.xml မွာရွာလိမ့္မယ္
 		String s = config.getInitParameter("construction");
 		if (s.equals("yes")) {
 			out.print("This page is under construction");

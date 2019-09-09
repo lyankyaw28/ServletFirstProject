@@ -17,7 +17,6 @@ public class PaginationServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		//spageid မွာ page ေနာက္က parameter ၿဖစ္တဲ့ page no ပါလာမယ္
 		String spageid = request.getParameter("page");
 		int pageid = Integer.parseInt(spageid);
 		int total = 5;

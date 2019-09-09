@@ -2,7 +2,6 @@ package event_and_listener.servlet_context_event_listener;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -14,7 +13,7 @@ public class ServletContextMyListener implements ServletContextListener {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/servlet?" + "user=root&password=root");
 			
-			String query = "CREATE TABLE `servlet`.`emp32` (`id` INT NOT NULL,`name` VARCHAR(45) NULL , PRIMARY KEY (`id`))";
+			/*String query = "CREATE TABLE `servlet`.`emp32` (`id` INT NOT NULL,`name` VARCHAR(45) NULL , PRIMARY KEY (`id`))";
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.executeUpdate();
 			
@@ -24,7 +23,7 @@ public class ServletContextMyListener implements ServletContextListener {
 			
 			String query2 = "INSERT INTO `servlet`.`emp32` (`id`, `name`) VALUES ('2', 'Lyan Kyaw')";
 			ps = con.prepareStatement(query2);
-			ps.executeUpdate();
+			ps.executeUpdate();*/
 
 			// storing connection object as an attribute in ServletContext
 			ServletContext ctx = event.getServletContext();

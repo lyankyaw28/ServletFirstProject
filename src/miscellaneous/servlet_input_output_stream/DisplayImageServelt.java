@@ -1,10 +1,11 @@
-package miscellaneous.servletInputOutputStream;
+package miscellaneous.servlet_input_output_stream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,13 +18,16 @@ public class DisplayImageServelt extends HttpServlet {
 		response.setContentType("image/jpeg");
 		ServletOutputStream out;
 		out = response.getOutputStream();
+		ServletContext context = getServletContext();
+		String fullPath = context.getRealPath("/miscellaneous/servlet_input_output_stream/java.jpg");
+		System.out.println(fullPath);
 		FileInputStream fin = new FileInputStream(
-				"D:\\TOTAL_REAL_WORKSPACE\\ServletFirstProject\\WebContent\\miscellaneous\\servletInputOutputStream\\java.jpg");
+				context.getRealPath("/miscellaneous/servlet_input_output_stream/java.jpg"));
 
 		BufferedInputStream bin = new BufferedInputStream(fin);
 		BufferedOutputStream bout = new BufferedOutputStream(out);
 		int ch = 0;
-		;
+
 		while ((ch = bin.read()) != -1) {
 			bout.write(ch);
 		}

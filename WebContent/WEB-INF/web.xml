@@ -304,10 +304,8 @@
 		<listener-class>event_and_listener.http_session_event_listener.HttpSessionMyListener</listener-class>
 	</listener>
 	<!-- 6.2 event_and_listener/http_session_event_listener -->
-
-	<listener>
-		<listener-class>http_session_event_listener.HttpSessionLoginLogoutListener</listener-class>
-	</listener>
+	
+	<!-- 7.1 filter/simple_filter -->
 	<servlet>
 		<servlet-name>SimpleFilterServlet</servlet-name>
 		<servlet-class>filter.simple_filter.SimpleFilterServlet</servlet-class>
@@ -324,6 +322,9 @@
 		<filter-name>SimpleFilter</filter-name>
 		<url-pattern>/simpleFilterServlet</url-pattern>
 	</filter-mapping>
+	<!-- 7.1 filter/simple_filter -->
+	
+	<!-- 7.2 filter/authentication_filter -->
 	<servlet>
 		<servlet-name>AuthenticationFilterServlet</servlet-name>
 		<servlet-class>filter.authentication_filter.AuthenticationFilterServlet</servlet-class>
@@ -340,6 +341,9 @@
 		<filter-name>AuthenticationFilter</filter-name>
 		<url-pattern>/authenticationFilterServlet</url-pattern>
 	</filter-mapping>
+	<!-- 7.2 filter/authentication_filter -->
+	
+	<!-- 7.3 filter/filter_config -->
 	<servlet>
 		<servlet-name>FilterConfigServlet</servlet-name>
 		<servlet-class>filter.filter_config.FilterConfigServlet</servlet-class>
@@ -360,6 +364,9 @@
 		<filter-name>FilterConfigFliter</filter-name>
 		<url-pattern>/filterConfigServlet</url-pattern>
 	</filter-mapping>
+	<!-- 7.3 filter/filter_config -->
+	
+	<!-- 7.4 filter/useful_example -->
 	<servlet>
 		<servlet-name>ResponseByFilterOnlyServlet</servlet-name>
 		<servlet-class>filter.useful_example.ResponseByFilterOnlyServlet</servlet-class>
@@ -408,6 +415,9 @@
 		<filter-name>CheckTotalResponseTime</filter-name>
 		<url-pattern>/checkTotalResponseTimeServlet</url-pattern>
 	</filter-mapping>
+	<!-- 7.4 filter/useful_example -->
+	
+	<!-- 8.1 crud -->
 	<servlet>
 		<servlet-name>SaveServlet</servlet-name>
 		<servlet-class>crud.SaveServlet</servlet-class>
@@ -448,6 +458,9 @@
 		<servlet-name>DeleteServlet</servlet-name>
 		<url-pattern>/deleteServlet</url-pattern>
 	</servlet-mapping>
+	<!-- 8.1 crud -->
+	
+	<!-- 9.1 pagination -->
 	<servlet>
 		<servlet-name>PaginationServlet</servlet-name>
 		<servlet-class>pagination.PaginationServlet</servlet-class>
@@ -456,14 +469,19 @@
 		<servlet-name>PaginationServlet</servlet-name>
 		<url-pattern>/paginationServlet</url-pattern>
 	</servlet-mapping>
+	<!-- 9.1 pagination -->
+	
+	<!-- 10.1 miscellaneous/servlet_input_output_stream -->
 	<servlet>
 		<servlet-name>DisplayImageServelt</servlet-name>
-		<servlet-class>miscellaneous.servletInputOutputStream.DisplayImageServelt</servlet-class>
+		<servlet-class>miscellaneous.servlet_input_output_stream.DisplayImageServelt</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DisplayImageServelt</servlet-name>
 		<url-pattern>/displayImageServelt</url-pattern>
 	</servlet-mapping>
+	<!-- 10.1 miscellaneous/servlet_input_output_stream -->
+	
 	<servlet>
 		<servlet-name>SingleThreadModelServlet</servlet-name>
 		<servlet-class>miscellaneous.single_thread_model.SingleThreadModelServlet</servlet-class>
@@ -564,6 +582,29 @@
 		<url-pattern>/demoServ</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+		<!-- 10.1 miscellaneous/servlet_input_output_stream -->
+		<welcome-file>miscellaneous/servlet_input_output_stream/index.html</welcome-file>
+		
+		<!-- 9.1 pagination -->
+		<welcome-file>pagination/index.html</welcome-file>
+		
+		<!-- 8.1 crud -->
+		<welcome-file>crud/index.html</welcome-file>
+		
+		<!-- 7.4 filter/useful_example -->
+		<welcome-file>filter/useful_example/responseByFilterOnly.html</welcome-file>
+		<welcome-file>filter/useful_example/countByUser.html</welcome-file>
+		<welcome-file>filter/useful_example/checkTotalResponseTime.html</welcome-file>
+		
+		<!-- 7.3 filter/filter_config -->
+		<welcome-file>filter/filter_config/index.html</welcome-file>
+		
+		<!-- 7.2 filter/authentication_filter -->
+		<welcome-file>filter/authentication_filter/index.html</welcome-file>
+		
+		<!-- 7.1 filter/simple_filter -->
+		<welcome-file>filter/simple_filter/index.html</welcome-file>
+		
 		<!-- 6.2 event_and_listener/http_session_event_listener -->
 		<welcome-file>event_and_listener/http_session_event_listener/index.html</welcome-file>
 		
@@ -619,15 +660,14 @@
 		<welcome-file>development/fetching_records/index.html</welcome-file>
 		<welcome-file>development/register/register.html</welcome-file>
 		<welcome-file>miscellaneous/single_thread_model/index.html</welcome-file>
-		<welcome-file>miscellaneous/servletInputOutputStream/index.html</welcome-file>
+		
 		<welcome-file>pagination/index.html</welcome-file>
-		<welcome-file>crud/index.html</welcome-file>
-		<welcome-file>filter/useful_example/checkTotalResponseTime.html</welcome-file>
-		<welcome-file>filter/useful_example/countByUser.html</welcome-file>
-		<welcome-file>filter/useful_example/responseByFilterOnly.html</welcome-file>
+		
+		
+		
 		<welcome-file>filter/filter_config/index.html</welcome-file>
-		<welcome-file>filter/authentication_filter/index.html</welcome-file>
-		<welcome-file>filter/simple_filter/index.html</welcome-file>
+		
+		
 		<welcome-file>http_session_event_listener/index.html</welcome-file>
 		<welcome-file>http_session_login_logout_profile/index.html</welcome-file>
 		<welcome-file>http_session/index.html</welcome-file>

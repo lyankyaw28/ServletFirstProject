@@ -12,7 +12,7 @@ public class PaginationDao {
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost/servletcrud?" + "user=root&password=root");
+			con = DriverManager.getConnection("jdbc:mysql://localhost/servlet?" + "user=root&password=root");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -23,7 +23,7 @@ public class PaginationDao {
 		List<PaginationEntity> list = new ArrayList<PaginationEntity>();
 		try {
 			Connection con = getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from emp limit " + (start - 1) + "," + total);
+			PreparedStatement ps = con.prepareStatement("select * from pagination limit " + (start - 1) + "," + total);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				PaginationEntity e = new PaginationEntity();
