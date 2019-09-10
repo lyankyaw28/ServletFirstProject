@@ -2,7 +2,18 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-
+	
+	<!-- 0.1 servlet_request -->
+	<servlet>
+		<servlet-name>demoServ</servlet-name>
+		<servlet-class>servlet_request.DemoServ</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>demoServ</servlet-name>
+		<url-pattern>/demoServ</url-pattern>
+	</servlet-mapping>
+	<!-- 0.1 servlet_request -->
+	
 	<!-- 1.1 servlet_collaboration/request_dispatcher -->
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
@@ -482,6 +493,7 @@
 	</servlet-mapping>
 	<!-- 10.1 miscellaneous/servlet_input_output_stream -->
 	
+	<!-- 10.2 miscellaneous/single_thread_model -->
 	<servlet>
 		<servlet-name>SingleThreadModelServlet</servlet-name>
 		<servlet-class>miscellaneous.single_thread_model.SingleThreadModelServlet</servlet-class>
@@ -490,6 +502,9 @@
 		<servlet-name>SingleThreadModelServlet</servlet-name>
 		<url-pattern>/singleThreadModelServlet</url-pattern>
 	</servlet-mapping>
+	<!-- 10.2 miscellaneous/single_thread_model -->
+	
+	<!-- 11.1 development/register -->
 	<servlet>
 		<servlet-name>RegisterServlet</servlet-name>
 		<servlet-class>development.register.RegisterServlet</servlet-class>
@@ -498,6 +513,9 @@
 		<servlet-name>RegisterServlet</servlet-name>
 		<url-pattern>/registerServlet</url-pattern>
 	</servlet-mapping>
+	<!-- 11.1 development/register -->
+	
+	<!-- 11.2 development/fetching_records -->
 	<servlet>
 		<servlet-name>Search</servlet-name>
 		<servlet-class>development.fetching_records.Search</servlet-class>
@@ -506,6 +524,9 @@
 		<servlet-name>Search</servlet-name>
 		<url-pattern>/fetch/Search</url-pattern>
 	</servlet-mapping>
+	<!-- 11.2 development/fetching_records -->
+	
+	<!-- 11.3 development/improving_performance -->
 	<listener>
 		<listener-class>development.improving_performance.MyListener</listener-class>
 	</listener>
@@ -525,6 +546,9 @@
 		<servlet-name>MyServlet2</servlet-name>
 		<url-pattern>/myServlet2</url-pattern>
 	</servlet-mapping>
+	<!-- 11.3 development/improving_performance -->
+	
+	<!-- 11.4 development/uploading_file -->
 	<servlet>
 		<servlet-name>UploadServlet</servlet-name>
 		<servlet-class>development.uploading_file.UploadServlet</servlet-class>
@@ -533,6 +557,9 @@
 		<servlet-name>UploadServlet</servlet-name>
 		<url-pattern>/go</url-pattern>
 	</servlet-mapping>
+	<!-- 11.4 development/uploading_file -->
+	
+	<!-- 11.5 development/downloading_file -->
 	<servlet>
 		<servlet-name>DownloadServlet</servlet-name>
 		<servlet-class>development.downloading_file.DownloadServlet</servlet-class>
@@ -541,6 +568,9 @@
 		<servlet-name>DownloadServlet</servlet-name>
 		<url-pattern>/servlet/DownloadServlet</url-pattern>
 	</servlet-mapping>
+	<!-- 11.5 development/downloading_file -->
+	
+	<!-- 11.6 development/servlet_sending_email -->
 	<servlet>
 		<servlet-name>SendMail</servlet-name>
 		<servlet-class>development.servlet_sending_email.SendMail</servlet-class>
@@ -549,6 +579,20 @@
 		<servlet-name>SendMail</servlet-name>
 		<url-pattern>/SendMail</url-pattern>
 	</servlet-mapping>
+	<!-- 11.6 development/servlet_sending_email -->
+	
+	<!-- 11.7 development/wirte_data_to_pdf -->
+	<servlet>
+		<servlet-name>ServletPDF</servlet-name>
+		<servlet-class>development.wirte_data_to_pdf.ServletPDF</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletPDF</servlet-name>
+		<url-pattern>/servletPDF</url-pattern>
+	</servlet-mapping>
+	<!-- 11.7 development/wirte_data_to_pdf -->
+	
+	<!-- 11.8 development/login_example -->
 	<servlet>
 		<servlet-name>servlet1</servlet-name>
 		<servlet-class>development.login_example.FirstServlet</servlet-class>
@@ -565,6 +609,9 @@
 		<servlet-name>servlet2</servlet-name>
 		<url-pattern>/servlet2</url-pattern>
 	</servlet-mapping>
+	<!-- 11.8 development/login_example -->
+	
+	<!-- 11.9 development/writing_image -->
 	<servlet>
 		<servlet-name>writeImage</servlet-name>
 		<servlet-class>development.writing_image.DisplayImage</servlet-class>
@@ -573,15 +620,39 @@
 		<servlet-name>writeImage</servlet-name>
 		<url-pattern>/writeImage</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>demoServ</servlet-name>
-		<servlet-class>servlet_request.DemoServ</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>demoServ</servlet-name>
-		<url-pattern>/demoServ</url-pattern>
-	</servlet-mapping>
+	<!-- 11.9 development/writing_image -->
+	
 	<welcome-file-list>
+		<!-- 11.9 development/writing_image -->
+		<welcome-file>development/writing_image/index.html</welcome-file>
+		
+		<!-- 11.8 development/login_example -->
+		<welcome-file>development/login_example/index.html</welcome-file>
+		
+		<!-- 11.7 development/write_data_to_pdf -->
+		<welcome-file>development/wirte_data_to_pdf/index.html</welcome-file>
+		
+		<!-- 11.6 development/servlet_sending_email -->
+		<welcome-file>development/servlet_sending_email/index.html</welcome-file>
+		
+		<!-- 11.5 development/downloading_file -->
+		<welcome-file>development/downloading_file/index.html</welcome-file>
+		
+		<!-- 11.4 development/uploading_file -->
+		<welcome-file>development/uploading_file/index.html</welcome-file>
+		
+		<!-- 11.3 development/improving_performance -->
+		<welcome-file>development/improving_performance/index.html</welcome-file>
+		
+		<!-- 11.2 development/fetching_records -->
+		<welcome-file>development/fetching_records/index.html</welcome-file>
+		
+		<!-- 11.1 development/register -->
+		<welcome-file>development/register/register.html</welcome-file>
+		
+		<!-- 10.2 miscellaneous/single_thread_model -->
+		<welcome-file>miscellaneous/single_thread_model/index.html</welcome-file>
+		
 		<!-- 10.1 miscellaneous/servlet_input_output_stream -->
 		<welcome-file>miscellaneous/servlet_input_output_stream/index.html</welcome-file>
 		
@@ -649,33 +720,9 @@
 
 		<!-- 1.1 servlet_collaboration/request_dispatcher -->
 		<welcome-file>servlet_collaboration/request_dispatcher/login.html</welcome-file>
-
+		
+		<!-- 0.1 servlet_request -->
 		<welcome-file>servlet_request/index.html</welcome-file>
-		<welcome-file>development/writing_image/index.html</welcome-file>
-		<welcome-file>development/login_example/index.html</welcome-file>
-		<welcome-file>development/downloading_file/index.html</welcome-file>
-		<welcome-file>development/servlet_sending_email/index.html</welcome-file>
-		<welcome-file>development/uploading_file/index.html</welcome-file>
-		<welcome-file>development/improving_performance/index.html</welcome-file>
-		<welcome-file>development/fetching_records/index.html</welcome-file>
-		<welcome-file>development/register/register.html</welcome-file>
-		<welcome-file>miscellaneous/single_thread_model/index.html</welcome-file>
 		
-		<welcome-file>pagination/index.html</welcome-file>
-		
-		
-		
-		<welcome-file>filter/filter_config/index.html</welcome-file>
-		
-		
-		<welcome-file>http_session_event_listener/index.html</welcome-file>
-		<welcome-file>http_session_login_logout_profile/index.html</welcome-file>
-		<welcome-file>http_session/index.html</welcome-file>
-		<welcome-file>url_rewriting/index.html</welcome-file>
-		<welcome-file>hidden_form_field/index.html</welcome-file>
-		<welcome-file>cookie_login_logout_profile/index.html</welcome-file>
-		<welcome-file>cookie_in_servlet/index.html</welcome-file>
-		<welcome-file>servlet_config/servletConfig1.html</welcome-file>
-		<welcome-file>attribute/attribute.html</welcome-file>
 	</welcome-file-list>
 </web-app>
