@@ -2,6 +2,7 @@ package development.writing_image;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -20,8 +21,9 @@ public class DisplayImage extends HttpServlet {
 		response.setContentType("image/jpeg");
 		ServletOutputStream out;
 		out = response.getOutputStream();
-		FileInputStream fin = new FileInputStream(
-				"E:\\Workspace\\Own\\Servlet\\src\\development\\writing_image\\writing_image_directory\\Jillian-Facebook-2-1-696x366.jpg");
+		ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+		File file = new File(classloader.getResource("Jillian-Facebook-2-1-696x366.jpg").getFile());
+		FileInputStream fin = new FileInputStream(file.getAbsolutePath());
 
 		BufferedInputStream bin = new BufferedInputStream(fin);
 		BufferedOutputStream bout = new BufferedOutputStream(out);
